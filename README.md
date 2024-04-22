@@ -5,5 +5,5 @@ Due to polyfit returning only the slope and intercept while Go's stats package r
 Go's runtime was significantly faster than the Python implementation. I ran both programs from the commandline and attempted to keep the same number of functions calls similar but there is slightly more overhead in the Python version due to conversions to coordinates. This timing does not take into account the compiling process for the Go program or the import statements from Python.
 
 Results:</br>
-Go&emsp;&emsp;&emsp;</t>Python</br>
+Go&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</t>Python</br>
 ![Go Results](https://github.com/TheFoxForever/Stats-Golang/blob/main/Go_Screenshot.png)![Python Results](https://github.com/TheFoxForever/Stats-Golang/blob/main/Python_Screenshot.png)</br>
