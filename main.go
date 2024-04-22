@@ -7,13 +7,18 @@ import (
 	"github.com/montanaflynn/stats"
 )
 
-func calcLinReg(dataset string, data stats.Series) {
-	coordinates, _ := stats.LinearRegression(data)
+func calcLinReg(dataset string, data stats.Series) ([]stats.Coordinate, error) {
+
+	coordinates, err := stats.LinearRegression(data)
+	if err != nil {
+		return nil, fmt.Errorf("Linear Regression error for dataset %s %w", dataset, err)
+	}
 	fmt.Println("Dataset ", dataset)
 	for i := 0; i < len(coordinates); i++ {
 		fmt.Println(coordinates[i])
 	}
 	fmt.Println()
+	return coordinates, nil
 }
 
 var first = []stats.Coordinate{
