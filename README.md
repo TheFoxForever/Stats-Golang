@@ -6,6 +6,6 @@ Go's runtime was significantly faster than the Python implementation. I ran both
 
 Results:</br>
 Go</br>
-![Go Results](https://github.com/TheFoxForever/Stats-Golang/blob/main/Go_Screenshot.png)</br>
+![Go Results](https://github.com/TheFoxForever/Stats-Golang/blob/main/Go_Screenshot.png)![Python Results](https://github.com/TheFoxForever/Stats-Golang/blob/main/Python_Screenshot.png)</br>
 Python</br>
 ![Python Results](https://github.com/TheFoxForever/Stats-Golang/blob/main/Python_Screenshot.png)
