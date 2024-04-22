@@ -1,4 +1,4 @@
-package main
+package statsTest
 
 import (
 	"fmt"
@@ -11,7 +11,7 @@ func calcLinReg(dataset string, data stats.Series) ([]stats.Coordinate, error) {
 
 	coordinates, err := stats.LinearRegression(data)
 	if err != nil {
-		return nil, fmt.Errorf("Linear Regression error for dataset %s %w", dataset, err)
+		return nil, fmt.Errorf("linear Regression error for dataset %s %w", dataset, err)
 	}
 	fmt.Println("Dataset ", dataset)
 	for i := 0; i < len(coordinates); i++ {
