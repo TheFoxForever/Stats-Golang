@@ -7,3 +7,6 @@ Go's runtime was significantly faster than the Python implementation. I ran both
 Results:</br>
 Go&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</t>Python</br>
 ![Go Results](https://github.com/TheFoxForever/Stats-Golang/blob/main/Go_Screenshot.png)![Python Results](https://github.com/TheFoxForever/Stats-Golang/blob/main/Python_Screenshot.png)</br>
+
+Overall Outcome:
+Pthon has a more mature data science and AI/ML environment with many packages built out than most languages do not and while there are resources such as Jupyter Notebooks for initial data exploration, Go is a superior approach when implementing solutions in a production environment. I would suggest that Python solutions can be a good fit for proof of concept and specific implementations, the brunt of the workload should be done in Go whenever possible. The speed different will only amplify as the amount of data grows.
