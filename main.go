@@ -1,4 +1,4 @@
-package statsTest
+package main
 
 import (
 	"fmt"
@@ -21,7 +21,7 @@ func calcLinReg(dataset string, data stats.Series) ([]stats.Coordinate, error) {
 	return coordinates, nil
 }
 
-var first = []stats.Coordinate{
+var first stats.Series = []stats.Coordinate{
 	{X: 10, Y: 8.04},
 	{X: 8, Y: 6.95},
 	{X: 13, Y: 7.58},
@@ -35,21 +35,21 @@ var first = []stats.Coordinate{
 	{X: 5, Y: 5.68},
 }
 
-var second = []stats.Coordinate{
-	{10, 9.14},
-	{8, 8.14},
-	{13, 8.74},
-	{9, 8.77},
-	{11, 9.26},
-	{14, 8.10},
-	{6, 6.13},
-	{4, 3.10},
-	{12, 9.13},
-	{7, 7.26},
-	{5, 4.74},
+var second stats.Series = []stats.Coordinate{
+	{X: 10, Y: 9.14},
+	{X: 8, Y: 8.14},
+	{X: 13, Y: 8.74},
+	{X: 9, Y: 8.77},
+	{X: 11, Y: 9.26},
+	{X: 14, Y: 8.10},
+	{X: 6, Y: 6.13},
+	{X: 4, Y: 3.10},
+	{X: 12, Y: 9.13},
+	{X: 7, Y: 7.26},
+	{X: 5, Y: 4.74},
 }
 
-var third = []stats.Coordinate{
+var third stats.Series = []stats.Coordinate{
 	{10, 7.46},
 	{8, 6.77},
 	{13, 12.74},
@@ -63,7 +63,7 @@ var third = []stats.Coordinate{
 	{5, 5.73},
 }
 
-var fourth = []stats.Coordinate{
+var fourth stats.Series = []stats.Coordinate{
 	{8, 6.58},
 	{8, 5.76},
 	{8, 7.71},

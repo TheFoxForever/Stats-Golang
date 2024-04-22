@@ -1,4 +1,4 @@
-package statsTest
+package main
 
 import (
 	"testing"
