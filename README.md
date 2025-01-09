@@ -1,26 +1,26 @@
-This repo was used to compare the precision of output between the https://github.com/montanaflynn/stats package and Python's numpy package. Comparissions were used against Anscombe's quartet where all statistical descriptions of the dataset are the same but plotting reveals how different they are. Simple linear regression was performed on all four datasets and points were returned or extracted for comparission. 
+This repo was used to compare the precision of output between the https://github.com/montanaflynn/stats package and Python's NumPy package. Comparisons were used against Anscombe's quartet, where all statistical descriptions of the dataset are the same, but plotting reveals how different they are. Simple linear regression was performed on all four datasets, and points were returned or extracted for comparison. 
 
-Due to polyfit returning only the slope and intercept while Go's stats package returned the coordinates from linear regression, I calculated datapoints based on the slope and intercept for points 4 through 13 to compare results between the two out to 6 decimal places. As far as the precision goes, both packages perform equally well and are both sufficient options in this instance. Dataset IV shows that returning only the slope and intercept can give the impression that there is an applicable regression model to fit even though it has perfect multicollinearity. Go returned NaN for this calculation and Python should return a slope of 0 to indicate in their own way that this data is not suitable to create a linear model.
+Due to polyfit returning only the slope and intercept while Go's stats package returned the coordinates from linear regression, I calculated data points based on the slope and intercept for points 4 through 13 to compare results between the two out of 6 decimal places. Regarding precision, both packages perform equally well and are both sufficient options. Dataset IV shows that returning only the slope and intercept can give the impression that there is an applicable regression model to fit even though it has perfect multicollinearity. Go returned NaN for this calculation, and Python should return a slope of 0 to indicate in their own way that this data is unsuitable for creating a linear model.
 
-Go's runtime was significantly faster than the Python implementation. I ran both programs from the commandline and attempted to keep the same number of functions calls similar but there is slightly more overhead in the Python version due to conversions to coordinates. This timing does not take into account the compiling process for the Go program or the import statements from Python.
+Go's runtime was significantly faster than the Python implementation. I ran both programs from the command line and attempted to keep the same number of function calls similar, but there is slightly more overhead in the Python version due to conversions to coordinates. This timing does not consider the compiling process for the Go program or the import statements from Python.
 
 Results:</br>
 Go&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</t>Python</br>
 ![Go Results](https://github.com/TheFoxForever/Stats-Golang/blob/main/Go_Screenshot.png)![Python Results](https://github.com/TheFoxForever/Stats-Golang/blob/main/Python_Screenshot.png)</br>
 
 Overall Outcome:
-Pthon has a more mature data science and AI/ML environment with many packages built out than most languages do not and while there are resources such as Jupyter Notebooks for initial data exploration, Go is a superior approach when implementing solutions in a production environment. I would suggest that Python solutions can be a good fit for proof of concept and specific implementations, the brunt of the workload should be done in Go whenever possible. The speed different will only amplify as the amount of data grows.
+Python has a more mature data science and AI/ML environment with many packages built out than most languages do not. While resources like Jupyter Notebooks are available for initial data exploration, Go is a superior approach when implementing solutions in a production environment. Python solutions can be a good fit for proof of concept and specific implementations; the brunt of the workload should be done in Go whenever possible. The speed difference will only amplify as the amount of data grows.
 
 
-Copilot adjustments / queries:
+Copilot adjustments/queries:
 
 Query 1 :
 Can I store the large variables in another file and reference them in main.go?
 
 I did not accept this change since it was the same as what I already had.
-also tried: 
-    move all of the first, second, third, and fourth variables into another file.
-but generated the same code as the previous query.
+Also tried: 
+    Move all of the first, second, third, and fourth variables into another file.
+But generated the same code as the previous query.
 
 Suggested change:
 package data
@@ -91,7 +91,7 @@ Generated the same code I already had typed. Discarded.
 query 3:
 Could you create more unit tests for this function?
 
-Notes: I accepted this, but it fails this test with empty dataset. It calls calcLinReg and expects no error, but it should generate an error since it is passing an empty dataset. Leaving for awareness, but noting here.
+Notes: I accepted this, but it failed this test with the empty dataset. It calls calcLinReg and expects no error, but it should generate an error since it is passing an empty dataset. I am leaving for awareness, but I am noting here.
 
 Generated and accepted code:
 func TestCalcLinReg_WithEmptyDataset(t *testing.T) {
@@ -157,10 +157,10 @@ func TestCalcLinReg_WithEmptyDataset(t *testing.T) {
 	}
 
 ChatGPT 3.5:
-Pasted my entire program to add into context window for chat.
+I pasted my entire program to add into the context window for a chat.
 
 # Query 1:
-could I add another file and place the variables first second third and fourth in that file and just reference them in main?
+could I add another file and place the variables first, second, third, and fourth in that file and just reference them in the main?
 
 # ANSWER:
 
